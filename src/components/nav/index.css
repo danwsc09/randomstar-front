@@ -13,3 +13,7 @@
 .nav-left li {
   margin: 0 1rem;
 }
+
+.active-nav {
+  color: blue;
+}

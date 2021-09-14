@@ -1,6 +1,7 @@
 import { Switch, Route } from 'react-router-dom';
 import LoginForm from 'components/main/loginForm/LoginForm';
 import MainHome from 'components/main/mainHome/MainHome';
+import RegistrationForm from 'components/main/registrationForm/RegistrationForm';
 
 const Main = () => {
   return (
@@ -9,7 +10,9 @@ const Main = () => {
         <Route path="/login">
           <LoginForm />
         </Route>
-        <Route path="/register">{/* <RegistrationForm /> */}</Route>
+        <Route path="/register">
+          <RegistrationForm />
+        </Route>
         <Route path="/ranking">{/* <Ranking /> */}</Route>
         <Route path="/abilites">{/* <AbilityList /> */}</Route>
         <Route path="/players">{/* <PlayerList /> */}</Route>
