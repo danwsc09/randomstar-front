@@ -1,0 +1,9 @@
+/* footer */
+footer {
+  padding: 0 0 2rem 1rem;
+  background-color: #ccc;
+  text-align: center;
+}
+footer div {
+  padding-top: 1rem;
+}

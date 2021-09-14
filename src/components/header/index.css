@@ -1,0 +1,35 @@
+/* header */
+.header-row {
+  /* remove color */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-row > * {
+  /* border: blue 2px solid; */
+  flex-basis: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header-middle {
+  font-size: 2rem;
+  align-self: center;
+}
+
+.header-left img {
+  max-height: 100px;
+  margin-left: 1rem;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-self: center;
+}
+
+.header-right li {
+  margin: 0 1rem;
+}
