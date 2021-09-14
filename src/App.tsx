@@ -4,7 +4,7 @@ import Navbar from 'components/nav/Navbar';
 import Main from 'components/main/Main';
 import Footer from 'components/footer/Footer';
 
-const App = () => (
+const App: React.FC = () => (
   <Router>
     <Header />
     <Navbar />

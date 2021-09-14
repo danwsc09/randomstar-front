@@ -1,6 +1,6 @@
 import './index.css';
 
-const Footer = (props: any) => {
+const Footer: React.FC = () => {
   return (
     <footer>
       <section className="container">

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from 'assets/logo-transparent.png';
 import './index.css';
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header>
       <section className="container">

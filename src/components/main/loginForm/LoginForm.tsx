@@ -6,8 +6,6 @@ interface UserCredentials {
   password: string;
 }
 
-type field = 'username' | 'password';
-
 const LoginForm: React.FC = () => {
   const [userInfo, setUserInfo] = useState<UserCredentials>({
     username: '',

@@ -3,7 +3,7 @@ import LoginForm from 'components/main/loginForm/LoginForm';
 import MainHome from 'components/main/mainHome/MainHome';
 import RegistrationForm from 'components/main/registrationForm/RegistrationForm';
 
-const Main = () => {
+const Main: React.FC = () => {
   return (
     <section className="container">
       <Switch>
