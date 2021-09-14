@@ -1,28 +1,26 @@
+import { Link } from 'react-router-dom';
+
 import logo from 'assets/logo-transparent.png';
 import './index.css';
 
-const Header = (props: any) => {
+const Header = () => {
   return (
     <header>
       <section className="container">
         <section className="header-row">
           <div className="header-left">
-            <a href="#">
+            <Link to="/">
               <img src={logo} />
-            </a>
+            </Link>
           </div>
           <div className="header-middle">
-            <a href="#">랜능크 전적사이트</a>
+            <Link to="/">랜능크 전적사이트</Link>
           </div>
           <ul className="header-right">
+            <li>언어</li>
+            <li>Light/Dark</li>
             <li>
-              <a href="#">언어</a>
-            </li>
-            <li>
-              <a href="#">Light/Dark</a>
-            </li>
-            <li>
-              <a href="#">로그인</a>
+              <Link to="/login">로그인</Link>
             </li>
           </ul>
         </section>

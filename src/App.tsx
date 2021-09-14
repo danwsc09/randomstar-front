@@ -1,17 +1,16 @@
-import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Header from 'components/header/Header';
 import Navbar from 'components/nav/Navbar';
 import Main from 'components/main/Main';
 import Footer from 'components/footer/Footer';
 
-const App = (props: any) => (
-  <React.Fragment>
+const App = () => (
+  <Router>
     <Header />
     <Navbar />
     <Main />
-    <h1>Hi !</h1>
     <Footer />
-  </React.Fragment>
+  </Router>
 );
 
 export default App;
