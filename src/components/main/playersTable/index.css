@@ -1,0 +1,18 @@
+.player-row img {
+  height: 1rem;
+}
+
+.rank {
+  margin-bottom: 3rem;
+}
+
+.rank-title {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* table */
+.players-summary {
+  width: 100%;
+  text-align: center;
+}

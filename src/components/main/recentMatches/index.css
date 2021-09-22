@@ -1,0 +1,47 @@
+.recent-title {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* match */
+.match-container {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.match-container > * {
+  align-items: center;
+  flex-basis: 5%;
+}
+
+.match-container .team,
+.match-container .game-summary {
+  flex-grow: 1;
+}
+
+.team {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.team.win {
+  color: blue;
+}
+
+.team.loss {
+  color: red;
+}
+
+.game-mode {
+  text-align: center;
+}
+
+.player {
+  text-align: center;
+  /* margin-bottom: 10px; */
+}

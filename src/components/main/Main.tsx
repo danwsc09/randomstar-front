@@ -1,7 +1,12 @@
 import { Switch, Route } from 'react-router-dom';
 import LoginForm from 'components/main/loginForm/LoginForm';
-import MainHome from 'components/main/mainHome/MainHome';
 import RegistrationForm from 'components/main/registrationForm/RegistrationForm';
+import PlayersTable from 'components/main/playersTable/PlayersTable';
+import RecentMatches from 'components/main/recentMatches/RecentMatches';
+import NewHomeForm from 'components/main/newMatchForm/NewFormHome';
+import NewMatchForm from 'components/main/newMatchForm/NewMatchForm';
+import NewGameForm from 'components/main/newMatchForm/NewGameForm';
+import AbilityList from 'components/main/abilityList/AbilityList';
 
 const Main: React.FC = () => {
   return (
@@ -13,14 +18,24 @@ const Main: React.FC = () => {
         <Route path="/register">
           <RegistrationForm />
         </Route>
-        <Route path="/ranking">{/* <Ranking /> */}</Route>
-        <Route path="/abilites">{/* <AbilityList /> */}</Route>
-        <Route path="/players">{/* <PlayerList /> */}</Route>
+        <Route path="/abilities">
+          <AbilityList />
+        </Route>
+        <Route path="/players">
+          <PlayersTable />
+        </Route>
+        <Route path="/new/match">
+          <NewMatchForm />
+        </Route>
+        <Route path="/new/game">
+          <NewGameForm />
+        </Route>
         <Route path="/new">
-          <div></div>
+          <NewHomeForm className="new-home-form" />
         </Route>
         <Route path="/">
-          <MainHome />
+          <PlayersTable />
+          <RecentMatches />
         </Route>
       </Switch>
     </section>
