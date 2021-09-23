@@ -31,7 +31,7 @@ const Main: React.FC = () => {
           <NewGameForm />
         </Route>
         <Route path="/new">
-          <NewHomeForm className="new-home-form" />
+          <NewHomeForm className="" />
         </Route>
         <Route path="/">
           <PlayersTable />

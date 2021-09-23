@@ -1,9 +1,8 @@
-interface TitleProps {
-  title: string;
-}
+import styled from 'styled-components';
 
-const Title: React.FC<TitleProps> = (props: TitleProps) => {
-  return <h2>{props.title}</h2>;
-};
+const Title = styled.h2`
+  color: #333;
+  text-align: center;
+`;
 
 export default Title;

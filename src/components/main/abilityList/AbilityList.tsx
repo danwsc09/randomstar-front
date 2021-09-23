@@ -1,3 +1,4 @@
+import Title from 'components/common/Title';
 import styled from 'styled-components';
 
 const tempList = [
@@ -37,6 +38,7 @@ interface AbilityRowProps {
 const AbilityList: React.FC = () => {
   return (
     <section>
+      <Title>능력 설명</Title>
       <table>
         <thead>
           <tr>
