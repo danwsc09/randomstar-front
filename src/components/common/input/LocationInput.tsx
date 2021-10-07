@@ -13,7 +13,7 @@ const LocationInput: React.FC<LocationInputProps> = ({
   setPlayerInfo,
 }) => {
   return (
-    <FormControl fullWidth>
+    <FormControl fullWidth sx={{ marginBottom: '15px' }}>
       <InputLabel>위치</InputLabel>
       <Select
         value={playerInfo?.location || ''}

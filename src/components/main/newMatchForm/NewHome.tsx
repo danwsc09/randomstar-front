@@ -11,7 +11,7 @@ const StyledSpan = styled.span`
   font-weight: bold;
 `;
 
-const NewHomeForm: React.FC<HomeProps> = (props: HomeProps) => {
+const NewHome: React.FC<HomeProps> = (props: HomeProps) => {
   const { url } = useRouteMatch();
   return (
     <div className={props.className + ' container'}>
@@ -51,4 +51,4 @@ const NewHomeForm: React.FC<HomeProps> = (props: HomeProps) => {
   );
 };
 
-export default NewHomeForm;
+export default NewHome;

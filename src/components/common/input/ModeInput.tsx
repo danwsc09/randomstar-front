@@ -10,7 +10,7 @@ interface ModeInputProps {
 
 const ModeInput: React.FC<ModeInputProps> = ({ mode, setMode }) => {
   return (
-    <FormControl fullWidth>
+    <FormControl fullWidth sx={{ marginBottom: '15px' }}>
       <InputLabel>모드</InputLabel>
       <Select value={mode} onChange={(e) => setMode(e.target.value)}>
         <MenuItem value={'normal'}>일반</MenuItem>

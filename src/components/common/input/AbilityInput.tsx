@@ -14,6 +14,7 @@ const AbilityInput: React.FC<AbilityInputProps> = ({
 }: AbilityInputProps) => {
   return (
     <Autocomplete
+      sx={{ marginBottom: '15px' }}
       options={abilities}
       getOptionLabel={(option) => option.name}
       onInputChange={(ev, value) =>

@@ -14,6 +14,7 @@ const PlayerInput: React.FC<PlayerInputProps> = ({
 }: PlayerInputProps) => {
   return (
     <Autocomplete
+      sx={{ marginBottom: '15px' }}
       options={players}
       onInputChange={(ev, value) =>
         setPlayerInfo({ ...playerInfo, name: value })

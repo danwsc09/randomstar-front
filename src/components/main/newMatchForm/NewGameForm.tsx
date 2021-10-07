@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 
-import Title from 'components/common/Title';
+import Box from '@mui/material/Box';
 import PlayerForm from 'components/common/PlayerForm';
 import ModeInput from 'components/common/input/ModeInput';
 import WinnerInput from 'components/common/input/WinnerInput';
 import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
 
 const defaultPlayerInfo: PlayerInfo = {
   name: '',
@@ -60,13 +62,7 @@ const NewGameForm: React.FC = () => {
   const [player2Info, setPlayer2Info] = useState<PlayerInfo>(defaultPlayerInfo);
   const [player3Info, setPlayer3Info] = useState<PlayerInfo>(defaultPlayerInfo);
   const [player4Info, setPlayer4Info] = useState<PlayerInfo>(defaultPlayerInfo);
-  console.log(
-    'player infos:',
-    player1Info,
-    player2Info,
-    player3Info,
-    player4Info,
-  );
+  const [summary, setSummary] = useState('');
 
   const handleSubmit = () => {
     // 등록
@@ -78,6 +74,8 @@ const NewGameForm: React.FC = () => {
 
     if (!namesFilled) {
       alert('선수들의 이름을 입력해주세요.');
+    } else if (winner === '') {
+      alert('승자를 입력해주세요');
     } else {
       // send data to server and move to diff page
     }
@@ -85,57 +83,105 @@ const NewGameForm: React.FC = () => {
 
   return (
     <div>
-      <Title>게임 추가</Title>
-      <ModeInput setMode={setMode} mode={mode} />
-      <h3>Team 1</h3>
-      <div>선수 1</div>
-      <PlayerForm
-        abilities={abilityList}
-        players={players}
-        showAbility={mode === 'normal'}
-        playerInfo={player1Info}
-        setPlayerInfo={setPlayer1Info}
-      />
-      <div>선수 2</div>
-      <PlayerForm
-        abilities={abilityList}
-        players={players}
-        showAbility={mode === 'normal'}
-        playerInfo={player2Info}
-        setPlayerInfo={setPlayer2Info}
-      />
-      <h3>Team 2</h3>
-      <div>선수 3</div>
-      <PlayerForm
-        abilities={abilityList}
-        players={players}
-        showAbility={mode === 'normal'}
-        playerInfo={player3Info}
-        setPlayerInfo={setPlayer3Info}
-      />
-      <div>선수 4</div>
-      <PlayerForm
-        abilities={abilityList}
-        players={players}
-        showAbility={mode === 'normal'}
-        playerInfo={player4Info}
-        setPlayerInfo={setPlayer4Info}
-      />
+      <Typography component="h4" variant="h4" sx={{ textAlign: 'center' }}>
+        게임 추가
+      </Typography>
+      <Box sx={{ width: '60%', margin: '20px auto 0' }}>
+        <ModeInput setMode={setMode} mode={mode} />
+      </Box>
+      <Typography component="h6" variant="h6" sx={{ textAlign: 'center' }}>
+        팀 1
+      </Typography>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          width: '60%',
+          margin: '0 auto',
+        }}
+      >
+        <Box sx={{ flexGrow: 1 }}>
+          <PlayerForm
+            abilities={abilityList}
+            players={players}
+            showAbility={mode === 'normal'}
+            playerInfo={player1Info}
+            setPlayerInfo={setPlayer1Info}
+            label="선수 1"
+          />
+        </Box>
+        <Box sx={{ flexGrow: 1 }}>
+          <PlayerForm
+            abilities={abilityList}
+            players={players}
+            showAbility={mode === 'normal'}
+            playerInfo={player2Info}
+            setPlayerInfo={setPlayer2Info}
+            label="선수 2"
+          />
+        </Box>
+      </Box>
+      <Typography component="h6" variant="h6" sx={{ textAlign: 'center' }}>
+        팀 2
+      </Typography>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          width: '60%',
+          margin: '0 auto',
+        }}
+      >
+        <Box sx={{ flexGrow: 1 }}>
+          <PlayerForm
+            abilities={abilityList}
+            players={players}
+            showAbility={mode === 'normal'}
+            playerInfo={player3Info}
+            setPlayerInfo={setPlayer3Info}
+            label="선수 3"
+          />
+        </Box>
+        <Box sx={{ flexGrow: 1 }}>
+          <PlayerForm
+            abilities={abilityList}
+            players={players}
+            showAbility={mode === 'normal'}
+            playerInfo={player4Info}
+            setPlayerInfo={setPlayer4Info}
+            label="선수 4"
+          />
+        </Box>
+      </Box>
 
-      <label>승자</label>
-      <WinnerInput
-        winner={winner}
-        setWinner={setWinner}
-        players={[
-          player1Info.name,
-          player2Info.name,
-          player3Info.name,
-          player4Info.name,
-        ]}
-      />
-      <Button variant="outlined" color="success" onClick={handleSubmit}>
-        게임 등록
-      </Button>
+      <Box sx={{ width: '60%', margin: '0 auto' }}>
+        <WinnerInput
+          winner={winner}
+          setWinner={setWinner}
+          players={[
+            player1Info.name,
+            player2Info.name,
+            player3Info.name,
+            player4Info.name,
+          ]}
+        />
+      </Box>
+      <Box sx={{ width: '60%', margin: '0 auto' }}>
+        <TextField
+          label="게임 내용"
+          multiline
+          rows={4}
+          placeholder="게임 내용을 적어주세요"
+          value={summary}
+          onChange={(e) => setSummary(e.target.value)}
+          fullWidth
+        />
+      </Box>
+      <Box sx={{ textAlign: 'center', marginTop: '20px' }}>
+        <Button variant="outlined" color="success" onClick={handleSubmit}>
+          게임 등록
+        </Button>
+      </Box>
     </div>
   );
 };

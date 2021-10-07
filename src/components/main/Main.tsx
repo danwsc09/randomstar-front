@@ -3,10 +3,8 @@ import LoginForm from 'components/main/loginForm/LoginForm';
 import RegistrationForm from 'components/main/registrationForm/RegistrationForm';
 import PlayersTable from 'components/main/playersTable/PlayersTable';
 import RecentMatches from 'components/main/recentMatches/RecentMatches';
-import NewHomeForm from 'components/main/newMatchForm/NewFormHome';
-import NewMatchForm from 'components/main/newMatchForm/NewMatchForm';
-import NewGameForm from 'components/main/newMatchForm/NewGameForm';
 import AbilityList from 'components/main/abilityList/AbilityList';
+import NewRoute from 'components/main/newMatchForm/NewRoute';
 
 const Main: React.FC = () => {
   return (
@@ -24,14 +22,9 @@ const Main: React.FC = () => {
         <Route path="/players">
           <PlayersTable />
         </Route>
-        <Route path="/new/match">
-          <NewMatchForm />
-        </Route>
-        <Route path="/new/game">
-          <NewGameForm />
-        </Route>
+
         <Route path="/new">
-          <NewHomeForm className="" />
+          <NewRoute />
         </Route>
         <Route path="/">
           <PlayersTable />

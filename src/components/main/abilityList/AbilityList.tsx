@@ -39,7 +39,7 @@ const AbilityList: React.FC = () => {
   return (
     <section>
       <Title>능력 설명</Title>
-      <table>
+      <table style={{ margin: '0 auto', width: '80%' }}>
         <thead>
           <tr>
             <th>정식 이름</th>
@@ -70,7 +70,6 @@ const AbilityRow: React.FC<AbilityRowProps> = (props: AbilityRowProps) => (
 
 const StyledRow = styled(AbilityRow)`
   color: #444;
-  font-weight: bold;
   text-align: center;
 `;
 

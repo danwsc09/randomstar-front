@@ -2,6 +2,7 @@ import PlayerInput from 'components/common/input/PlayerInput';
 import AbilityInput from 'components/common/input/AbilityInput';
 import RaceInput from './input/RaceInput';
 import LocationInput from './input/LocationInput';
+import Typography from '@mui/material/Typography';
 
 interface playerFormProps {
   abilities: Ability[];
@@ -9,6 +10,7 @@ interface playerFormProps {
   showAbility: boolean;
   playerInfo: PlayerInfo;
   setPlayerInfo: React.Dispatch<React.SetStateAction<PlayerInfo>>;
+  label: string;
 }
 
 const PlayerForm: React.FC<playerFormProps> = ({
@@ -17,9 +19,13 @@ const PlayerForm: React.FC<playerFormProps> = ({
   setPlayerInfo,
   abilities,
   players,
+  label,
 }: playerFormProps) => {
   return (
     <div>
+      <Typography component="div" variant="body1" sx={{ textAlign: 'center' }}>
+        {label}
+      </Typography>
       <PlayerInput
         players={players}
         playerInfo={playerInfo}

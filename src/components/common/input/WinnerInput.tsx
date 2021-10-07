@@ -16,7 +16,7 @@ const WinnerInput: React.FC<WinnerInputProps> = ({
 }) => {
   const [player1, player2, player3, player4] = players;
   return (
-    <FormControl fullWidth>
+    <FormControl fullWidth sx={{ marginBottom: '15px' }}>
       <InputLabel>승자</InputLabel>
       <Select value={winner} onChange={(e) => setWinner(e.target.value)}>
         <MenuItem value={'1'}>

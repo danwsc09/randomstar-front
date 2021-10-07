@@ -10,7 +10,7 @@ interface RaceInputProps {
 
 const RaceInput: React.FC<RaceInputProps> = ({ playerInfo, setPlayerInfo }) => {
   return (
-    <FormControl fullWidth>
+    <FormControl fullWidth sx={{ marginBottom: '15px' }}>
       <InputLabel>종족</InputLabel>
       <Select
         value={playerInfo.race || ''}
