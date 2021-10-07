@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           Copyright 2021 RandomStarcraft.com &copy; All rights Reserved. Since
           2021-09-06
         </div>
-        <div className="icon-source">
+        <div className="icon-source" style={{ display: 'none' }}>
           Icons made by{' '}
           <a href="https://www.freepik.com" title="Freepik">
             Freepik
